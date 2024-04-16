@@ -2,7 +2,7 @@
 # PROJECT NAME: CognitiveQuest (Autism Prediction)
 
 ## Project Overview
-This project aims to develop a classification model to predict Autism Spectrum Disorder (ASD) using machine learning techniques. The model will be trained on the Autistic Spectrum Disorder Screening Data for child and adult dataset, which contains influential features for detecting ASD traits in adults and children. By analyzing behavioral features and individual characteristics from the dataset, this project aims to build a robust screening method that can assist healthcare professionals in early autism diagnosis.
+This project aims to develop a classification model to predict Autism Spectrum Disorder (ASD) using machine learning techniques. The model will be trained on the Autistic Spectrum Disorder Screening Data for child and adult dataset, which contains influential features for detecting ASD traits in adults and children. By analyzing the dataset's behavioural features and individual characteristics, this project aims to build a robust screening method that can assist healthcare professionals in early autism diagnosis.
 
 # **The Dataset**
 **Short Description of the Data:**
@@ -130,8 +130,6 @@ Random Forest emerged as the most balanced choice among the three models, delive
 
 2. **Open Streamlit App**:
   
-   ```
-
 3. **Test Locally**:
    Run app.py locally
    ```bash
