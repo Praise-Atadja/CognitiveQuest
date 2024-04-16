@@ -14,6 +14,7 @@ Original file is located at
 """
 
 #Import Necessary Libraries
+import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import MinMaxScaler
@@ -22,8 +23,6 @@ from sklearn.preprocessing import OneHotEncoder
 from sklearn.metrics import classification_report
 import joblib
 from joblib import dump
-from google.colab import drive
-drive.mount('/content/drive')
 import os
 import xgboost as xgb
 import pickle
@@ -84,7 +83,7 @@ def preprocess_features(input_data):
     return input_data_encoded
 
 # Load the Random Forest model from the pickle file
-random_forest_model = joblib.load("/content/models/random_forest.pkl")
+random_forest_model = joblib.load("../models/random_forest.pkl")
 
 # Prediction function
 def predict_input(random_forest_model):
