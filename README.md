@@ -48,7 +48,7 @@ Data aggregation from multiple sources is necessary for comprehensive analysis a
 
 ## Model Training
 
-### Model 1: Randomforest
+### Model 1: Random Forest
 -**Training Results with hyperparameter tuning**:
 - **Accuracy**: 0.9467
 - **Precision**: 0.9375
@@ -59,59 +59,60 @@ Data aggregation from multiple sources is necessary for comprehensive analysis a
 - **Kappa Score**: 0.8788
 - **Error Rate**: 0.0533
 
+
 -**Training Results without hyperparameter tuning**:
-Accuracy: 0.9400
-Precision: 0.9184
-Recall: 0.9000
-F1 Score: 0.9091
-Log Loss: 0.1710
-AUC Score: 0.9922
-Kappa Score: 0.8643
-Error Rate: 0.0600
+- **Accuracy**: 0.9400
+- **Precision**: 0.9184
+- **Recall**: 0.9000
+- **F1 Score**: 0.9091
+- **Log Loss**: 0.1710
+- **AUC Score**: 0.9922
+- **Kappa Score**: 0.8643
+- **Error Rate**: 0.0600
 
 
 ### Model 2: Adabooster Classifier
 -**Training Results with hyperparameter tuning**:
-Accuracy: 1.0000
-Precision: 1.0000
-Recall: 1.0000
-F1 Score: 1.0000
-Log Loss: 0.5607
-AUC Score: 1.0000
-Kappa Score: 1.0000
-Error Rate: 0.0000
+- **Accuracy**: 1.0000
+- **Precision**: 1.0000
+- **Recall**: 1.0000
+- **F1 Score**: 1.0000
+- **Log Loss**: 0.5607
+- **AUC Score**: 1.0000
+- **Kappa Score**: 1.0000
+- **Error Rate**: 0.0000
 
 -**Training Results without hyperparameter tuning**:
-Accuracy: 1.0000
-Precision: 1.0000
-Recall: 1.0000
-F1 Score: 1.0000
-Log Loss: 0.5481
-AUC Score: 1.0000
-Kappa Score: 1.0000
-Error Rate: 0.0000
+- **Accuracy**: 1.0000
+- **Precision**: 1.0000
+- **Recall**: 1.0000
+- **F1 Score**: 1.0000
+- **Log Loss**: 0.5481
+- **AUC Score**: 1.0000
+- **Kappa Score**: 1.0000
+- **Error Rate**: 0.0000
 
 
 ### Model 3: XCBoost Classifier
 -**Training Results with hyperparameter tuning**:
--**Accuracy**: 0.9200
--**Precision**: 0.9750
--**Recall**: 0.7800
--**F1 Score**: 0.8667
--**Log Loss**: 0.3486
--**AUC Score**: 0.9836
--**Kappa Score**: 0.8105
--**Error Rate**: 0.0800
+- **Accuracy**: 0.9200
+- **Precision**: 0.9750
+- **Recall**: 0.7800
+- **F1 Score**: 0.8667
+- **Log Loss**: 0.3486
+- **AUC Score**: 0.9836
+- **Kappa Score**: 0.8105
+- **Error Rate**: 0.0800
 
 -**Training Results without hyperparameter tuning**:
-Accuracy: 0.9600
-Precision: 0.9231
-Recall: 0.9600
-F1 Score: 0.9412
-Log Loss: 0.0636
-AUC Score: 0.9978
-Kappa Score: 0.9109
-Error Rate: 0.0400
+- **Accuracy**: 0.9600
+- **Precision**: 0.9231
+- **Recall**: 0.9600
+- **F1 Score**: 0.9412
+- **Log Loss**: 0.0636
+- **AUC Score**: 0.9978
+- **Kappa Score**: 0.9109
+- **Error Rate**: 0.0400
 
 
 ## Findings
