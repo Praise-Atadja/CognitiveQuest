@@ -50,14 +50,14 @@ Data aggregation from multiple sources is necessary for comprehensive analysis a
 
 ### Model 1: Randomforest
 -**Training Results with hyperparameter tuning**:
-Accuracy: 0.9467
-Precision: 0.9375
-Recall: 0.9000
-F1 Score: 0.9184
-Log Loss: 0.1792
-AUC Score: 0.9928
-Kappa Score: 0.8788
-Error Rate: 0.0533
+- **Accuracy**: 0.9467
+- **Precision**: 0.9375
+- **Recall**: 0.9000
+- **F1 Score**: 0.9184
+- **Log Loss**: 0.1792
+- **AUC Score**: 0.9928
+- **Kappa Score**: 0.8788
+- **Error Rate**: 0.0533
 
 -**Training Results without hyperparameter tuning**:
 Accuracy: 0.9400
