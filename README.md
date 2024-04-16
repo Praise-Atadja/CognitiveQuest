@@ -128,7 +128,7 @@ Random Forest emerged as the most balanced choice among the three models, delive
    pip install streamlit
    ```
 
-2. **Open Streamlit App**:
+2. **Open Streamlit App Folder**
   
 3. **Test Locally**:
    Run app.py locally
