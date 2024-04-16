@@ -49,7 +49,6 @@ Data aggregation from multiple sources is necessary for comprehensive analysis a
 ## Model Training
 
 ### Model 1: Randomforest
-
 -**Training Results with hyperparameter tuning**:
 Accuracy: 0.9467
 Precision: 0.9375
@@ -72,7 +71,6 @@ Error Rate: 0.0600
 
 
 ### Model 2: Adabooster Classifier
-
 -**Training Results with hyperparameter tuning**:
 Accuracy: 1.0000
 Precision: 1.0000
@@ -83,9 +81,8 @@ AUC Score: 1.0000
 Kappa Score: 1.0000
 Error Rate: 0.0000
 
- -**Training Results without hyperparameter tuning**:
+-**Training Results without hyperparameter tuning**:
 Accuracy: 1.0000
-
 Precision: 1.0000
 Recall: 1.0000
 F1 Score: 1.0000
@@ -96,7 +93,6 @@ Error Rate: 0.0000
 
 
 ### Model 3: XCBoost Classifier
-
 -**Training Results with hyperparameter tuning**:
 -**Accuracy**: 0.9200
 -**Precision**: 0.9750
@@ -119,7 +115,7 @@ Error Rate: 0.0400
 
 
 ## Findings
-Random Forest emerged as the most balanced choice among the three models, delivering consistently high performance with or without hyperparameter tuning. While AdaBoost Classifier showcased flawless accuracy, its computational demands may outweigh its benefits in certain contexts. XGBoost Classifier, although competitive especially after tuning, requires additional optimization efforts compared to Random Forest, making it slightly less straightforward to implement.
+Random Forest emerged as the most balanced choice among the three models, delivering consistently high performance with or without hyperparameter tuning. While AdaBoost Classifier showcased flawless accuracy, its computational demands may outweigh its benefits in specific contexts. XGBoost Classifier, although competitive, especially after tuning, requires additional optimization efforts compared to Random Forest, making it slightly less straightforward to implement.
 ---
 
 ### Setting up ML Deployment on Streamlit:
