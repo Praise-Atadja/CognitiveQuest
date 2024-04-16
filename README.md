@@ -85,6 +85,7 @@ Error Rate: 0.0000
 
  -**Training Results without hyperparameter tuning**:
 Accuracy: 1.0000
+
 Precision: 1.0000
 Recall: 1.0000
 F1 Score: 1.0000
