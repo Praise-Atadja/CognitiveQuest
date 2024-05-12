@@ -27,11 +27,20 @@ These metrics will help in quantitatively evaluating the effectiveness of the mo
 
 ## Pre-trained Model Selection
 
-###ResNet###: ResNet's capability to effectively handle deep features is crucial for capturing the subtle and complex patterns related to autism spectrum traits in the image dataset, aiding accurate classification into "autistic" and "non_autistic" categories.
+1. **ResNet50**:
+   - Performance: ResNet50's depth and skip connections enable effective capture of intricate features, crucial for distinguishing between "autistic" and "non_autistic" traits.
+   - Architecture: Its architecture addresses the vanishing gradient problem and is adept at capturing both low-level and high-level features.
+   - Suitability for the Task: ResNet50's depth and performance align well with the task's need to discern subtle traits associated with autism spectrum disorders.
 
-###InceptionV3###: InceptionV3's efficient pattern capturing ability, combined with its balance between complexity and performance, provides a strong foundation for accurately identifying diverse visual characteristics associated with autism spectrum traits in the image dataset, facilitating precise classification.
+2. **InceptionV3**:
+   - Performance: InceptionV3's multi-scale processing capability facilitates discernment of subtle differences between images, aiding in identifying autism spectrum traits.
+   - Architecture: Its efficient utilization of inception modules allows for capturing features at different scales, suitable for tasks with varying object sizes or appearances.
+   - Suitability for the Task: InceptionV3's multi-scale processing aligns with identifying autism spectrum traits, capturing both local and global features effectively.
 
-###VGG16###: Using VGG16 offers the benefit of simplicity, interpretability, and availability as a pre-trained model, facilitating efficient transfer learning for accurately classifying "autistic" and "non_autistic" images in the dataset.
+3. **VGG16**:
+   - Performance: VGG16's simple yet effective architecture offers competitive performance in image classification tasks, including discerning features relevant to autism spectrum traits.
+   - Architecture: Its uniform structure with multiple convolutional layers captures detailed features, potentially crucial for identifying subtle traits.
+   - Suitability for the Task: VGG16's emphasis on capturing detailed features aligns with the task's need to identify subtle traits associated with autism spectrum disorders.
 
 ## Discussion of Findings and Transfer Learning Analysis
 
@@ -54,7 +63,7 @@ These metrics will help in quantitatively evaluating the effectiveness of the mo
 
 | Model       | Accuracy | Loss | Precision | Recall | F1 Score |
 |-------------|----------|------|-----------|--------|----------|
-| ResNet      |   0.95   | ...  |    0.94   |  0.96  |   0.95   |
+| ResNet50    |   0.95   | ...  |    0.94   |  0.96  |   0.95   |
 | InceptionV3 |   0.96   | ...  |    0.95   |  0.97  |   0.96   |
 | VGG16       |   0.94   | ...  |    0.93   |  0.95  |   0.94   |
 
