@@ -1,10 +1,29 @@
 
 # PROJECT NAME: CognitiveQuest (Autism Prediction)
 
+A ML deployment app
+<!-- scre -->
+
+
+## Table of Contents
+
+- [Project Overview](#project overview)
+- [Features](#features)
+- [Prototype](#prototype)
+- [Getting Started](#getting-started)
+- [Prerequisites](#prerequisites)
+- [The Dataset](#dataset)
+- [Models](#models)
+- [Findings](#findings)
+- [Setting up ML Deployment on Streamlit](#streamlit)
+- [Deploying App on Streamlit Server](#deployment)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
+
 ## Project Overview
 This project aims to develop a classification model to predict Autism Spectrum Disorder (ASD) using machine learning techniques. The model will be trained on the Autistic Spectrum Disorder Screening Data for child and adult dataset, which contains influential features for detecting ASD traits in adults and children. By analyzing the dataset's behavioural features and individual characteristics, this project aims to build a robust screening method that can assist healthcare professionals in early autism diagnosis.
 
-# **The Dataset**
+### The Dataset
 **Short Description of the Data:**
 
 The dataset contains information pertinent to the screening of autism spectrum disorder (ASD), comprising the following columns:
@@ -46,9 +65,9 @@ In reference to the provided data sources:
 
 Data aggregation from multiple sources is necessary for comprehensive analysis as it allows for a broader coverage across different age groups (children and adults), enhances the sample size for statistical significance, validates findings through cross-verification, and addresses potential data gaps or biases present in individual datasets.
 
-## Model Training
+### Models
 
-### Model 1: Random Forest
+## Model 1: Random Forest
 -**Training Results with hyperparameter tuning**:
 - **Accuracy**: 0.9467
 - **Precision**: 0.9375
@@ -71,7 +90,7 @@ Data aggregation from multiple sources is necessary for comprehensive analysis a
 - **Error Rate**: 0.0600
 
 
-### Model 2: Adabooster Classifier
+## Model 2: Adabooster Classifier
 -**Training Results with hyperparameter tuning**:
 - **Accuracy**: 1.0000
 - **Precision**: 1.0000
@@ -93,7 +112,7 @@ Data aggregation from multiple sources is necessary for comprehensive analysis a
 - **Error Rate**: 0.0000
 
 
-### Model 3: XCBoost Classifier
+## Model 3: XCBoost Classifier
 -**Training Results with hyperparameter tuning**:
 - **Accuracy**: 0.9200
 - **Precision**: 0.9750
@@ -115,7 +134,7 @@ Data aggregation from multiple sources is necessary for comprehensive analysis a
 - **Error Rate**: 0.0400
 
 
-## Findings
+### Findings
 Random Forest emerged as the most balanced choice among the three models, delivering consistently high performance with or without hyperparameter tuning. While AdaBoost Classifier showcased flawless accuracy, its computational demands may outweigh its benefits in specific contexts. XGBoost Classifier, although competitive, especially after tuning, requires additional optimization efforts compared to Random Forest, making it slightly less straightforward to implement.
 ---
 

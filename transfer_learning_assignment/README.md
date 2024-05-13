@@ -1,8 +1,9 @@
 # Transfer Learning Assignment
 
-## Problem Statement and Dataset Description
+### Problem Statement
+Autistic Spectrum Disorder (ASD) is a neurodevelopmental condition associated with significant healthcare costs, and early diagnosis can significantly reduce these. Unfortunately, waiting times for an ASD diagnosis are lengthy and procedures are not cost effective.
 
-### Problem Statement:
+### Objective:
 The task is to classify images into two classes: "autistic" and "non_autistic", aiming to facilitate research and analysis in understanding autism spectrum traits. This involves training deep learning models using transfer learning techniques to accurately classify images into these two categories.
 
 ### Dataset:
@@ -44,28 +45,39 @@ These metrics will help in quantitatively evaluating the effectiveness of the mo
 
 ## Discussion of Findings and Transfer Learning Analysis
 
-### Findings:
-- Transfer learning significantly reduced training time and improved the performance of the models.
-- Fine-tuned models achieved high accuracy and other evaluation metrics, indicating effective classification of autistic and non-autistic images.
-- ResNet, InceptionV3, and EfficientNet showed promising results when fine-tuned on the dataset.
+### Rationale and Methodology for Fine-Tuning Deep Learning Models for Autism Prediction:
 
-### Strengths of Transfer Learning:
-- Transfer learning leverages knowledge learned from one task/domain and applies it to another, beneficial for tasks with limited labeled data like autism spectrum analysis.
-- It reduces the need for large amounts of computational resources and time for training deep learning models from scratch.
-- Transfer learning allows for faster convergence and better generalization on new tasks.
+  Despite being trained on unrelated datasets, VGG16, ResNet50, and InceptionV3 models possess learned representations of visual features that may be relevant to autism characteristics, such as facial expressions and body language. By fine-tuning these pre-trained models, the aim is to repurpose their learned representations to effectively identify patterns indicative of autism traits in images.
 
-### Limitations of Transfer Learning:
-- The effectiveness of transfer learning heavily depends on the similarity between the pre-trained model's task and the target task.
-- Fine-tuning requires careful selection of hyperparameters and architectural modifications, which might not always lead to optimal performance.
-- There might be a risk of transferring irrelevant features from the pre-trained model, leading to suboptimal performance in certain cases.
+### 1. Unfreezing Layers for Task Adaptation:
+   Specific layers closer to the output of the pre-trained models are unfrozen to allow adaptation to the nuances of autism prediction. Unfreezing these layers enables the model to learn task-specific features related to autism traits, such as facial expressions and body language cues. By selectively unfreezing layers, there is a retention of the learned representations of general image features while adapting to the specific task of autism prediction.
+
+### 2. Incorporating Task-Specific Layers:
+   Additional layers are added on top of the pre-trained base models to tailor them for the intricacies of autism prediction.The Flatten layer converts the 2D feature maps extracted by the pre-trained models into a 1D feature vector, facilitating further processing by subsequent layers.The dense layers with ReLU activation introduce non-linearity, allowing the model to learn complex patterns indicative of autism traits from the flattened feature vector. The final dense layer with softmax activation enables the model to classify images into autism and non-autism classes, providing a probabilistic output for each class.
+
+### 3. Optimization Techniques:
+   The Adam optimizer is chosen for its ability to adapt learning rates for each parameter, ensuring stable fine-tuning of the models. A reduced learning rate (0.0001) is employed during fine-tuning to prevent abrupt changes to the learned representations and promote gradual adjustment to the autism prediction task. The categorical cross-entropy loss function is selected for its effectiveness in multi-class classification tasks like autism prediction, measuring the discrepancy between predicted and true label distributions.
+
 
 ## Evaluated Fine-tuned Models
 
-| Model       | Accuracy | Loss | Precision | Recall | F1 Score |
-|-------------|----------|------|-----------|--------|----------|
-| ResNet50    |   0.95   | ...  |    0.94   |  0.96  |   0.95   |
-| InceptionV3 |   0.96   | ...  |    0.95   |  0.97  |   0.96   |
-| VGG16       |   0.94   | ...  |    0.93   |  0.95  |   0.94   |
+| Model       | Accuracy | Loss              | Precision | Recall | F1 Score               |
+|-------------|----------|-------------------|-----------|--------|------------------------|
+| ResNet50    |   0.5    | 0.6839388012886047|    0.5    |  0.99  |   0.6644295302013423   |
+| InceptionV3 |   0.5    | 0.6931672096252441|    0.5    |  1.0   |   0.6666666666666666   |
+| VGG16       |   0.5    | 0.6931895613670349|    0.5    |  1.0   |   0.6666666666666666   |
 
 ---
 
+## Findings:
+### Discussion:
+- Accuracy: The accuracy for all three models is 0.5, indicating that each model correctly predicts the class label for half of the instances in the validation set.
+- Loss: The loss values for ResNet50, InceptionV3, and VGG16 are similar, indicating similar performance in terms of minimizing the error between predicted and true class labels during training.
+- Precision: Precision is 0.5 for all models, suggesting that half of the predicted positive cases are true positives.
+- Recall: ResNet50, InceptionV3, and VGG16 have a recall of 0.99, 1.0, and 1.0, respectively, indicating that these models are very effective at capturing true positive instances of autism in the dataset.
+- F1 Score: ResNet50, InceptionV3, and VGG16 exhibit F1 scores of 0.664, 0.667, and 0.667, respectively, indicating a balance between precision and recall, crucial for tasks requiring accurate detection of autism-related characteristics.
+
+### General Limitations:
+- The models demonstrate a strong ability to identify autistic individuals, as indicated by high recall scores.
+- However, the overall accuracy and F1 score indicate a need for further optimization to achieve a balanced performance across both classes.
+- Fine-tuning hyperparameters, addressing class imbalances, or exploring alternative architectures may enhance model performance and generalization capabilities.
